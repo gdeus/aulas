@@ -35,11 +35,35 @@ class _CalculadoraState extends State<Calculadora> {
     return Scaffold(
       appBar: AppBar(title: Text('Calculadora'),),
       body: Column(children: [
-        TextField(
-          controller: primeiroNumero,
-        ),
-        TextField(
-          controller: segundoNumero,
+        Row(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: TextField(
+                    decoration: const InputDecoration(
+                      focusColor: Colors.red
+                    ),
+                    controller: primeiroNumero,
+                  ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: TextField(
+                    decoration: const InputDecoration(
+                    focusColor: Colors.red
+                  ),
+                    controller: segundoNumero,
+                  ),
+                ),
+              ],
+            ),
+            Text(
+              '$resultado'
+            ),
+          ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -84,7 +108,6 @@ class _CalculadoraState extends State<Calculadora> {
                 child: Text('X'),
               ),
             ),
-            Text('$resultado')
           ],
         )
       ],),
