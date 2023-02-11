@@ -40,8 +40,6 @@ class _CalculadoraState extends State<Calculadora> {
 
     void doExpression(String expressionSimbol){
       if(expression == null){
-        print('entrei no expression null');
-        print(valueString);
         expression = expressionSimbol;
         value1 = double.parse(valueString);
         valueString = '';
