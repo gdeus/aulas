@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         children: [
           Image.network('https://uniguacu.com.br/wp-content/uploads/2020/08/cropped-Unigua%C3%A7u-%C3%8Dcone.png', width: 200,),
-          rowButton(Icons.calculate, "Calculadora", () => navigationToCalculator()), 
+          rowButton(Icons.calculate_sharp, "Calculadora", () => navigationToCalculator()), 
           rowButton(Icons.task_sharp, "Lista de Tarefas", () => navigationToDoList()), 
         ],
       ), 
